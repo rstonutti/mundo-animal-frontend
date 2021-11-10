@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './sass/index.scss';
 import { MundoAnimalApp } from './MundoAnimalApp';
+
+import './sass/index.scss';
 
 ReactDOM.render(
   <MundoAnimalApp />,
