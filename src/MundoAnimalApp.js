@@ -9,10 +9,10 @@ const init = () => {
 
 export const MundoAnimalApp = () => {
 
-  const [jwt, dispatch] = useReducer(authReducer, {}, init)
+  const [state, dispatch] = useReducer(authReducer, {}, init);
 
   return (
-    <AuthContext.Provider value={{jwt, dispatch}}>
+    <AuthContext.Provider value={{state, dispatch}}>
       <AppRouter />
     </AuthContext.Provider>
   );
