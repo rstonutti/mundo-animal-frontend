@@ -3,9 +3,10 @@ import { AppRouter } from './routes/AppRouter';
 import { AuthContext } from './auth/AuthContext';
 import { authReducer } from './auth/authReducer';
 
-const init = () => {
-  return JSON.parse(localStorage.getItem('token')) || { logged: false };
-};
+const init = () => ({
+  checking: true
+  /* return JSON.parse(localStorage.getItem('token')) || { logged: false }; */
+});
 
 export const MundoAnimalApp = () => {
 

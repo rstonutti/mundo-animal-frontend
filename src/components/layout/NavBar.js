@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Link
 } from 'react-router-dom';
 
+import { startLogout } from '../../actions/auth';
+import { AuthContext } from '../../auth/AuthContext';
+
 import logo from '../../images/logo-ma.svg'
 
 export const NavBar = () => {
+
+    const { state, dispatch } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        startLogout(dispatch);
+    };
+
+    console.log(state);
+
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -28,6 +40,9 @@ export const NavBar = () => {
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-auto bd-highlight">
                         <li className="nav-item">
                             <Link className="nav-link" to="/auth/login">Iniciar Sesión</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/" onClick={handleLogout}>Cerrar Sesión</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/auth/registro">Registrarse</Link>
