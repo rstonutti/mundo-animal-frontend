@@ -32,12 +32,12 @@ export const Card = ({ tipo, mascota: { nombre, especie, personalidad }, imagen,
     return (
         <>
             <div key={uid} className="col-sm-2">
-                <div className="card mt-4">
+                <div className="card mt-4 w-100 h-100">
                     <Image
                         cloudName={nombre}
                         publicId={imagen}
                         width="100%"
-                        height="150"
+                        height="100%"
                     />
                     <div className="card-body py-2">
                         <div className="card-grid">
