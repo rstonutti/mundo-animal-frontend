@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getPublicaciones } from '../../helpers/publicacion';
 
-import './publicacion.scss';
-
 export const Publicacion = () => {
 
     const [cargando, setCargando] = useState(true);
