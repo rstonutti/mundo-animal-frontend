@@ -7,7 +7,7 @@ import './layout.scss'
 const filtroCaracteristicas = (tipo) => {
     switch (tipo) {
         case 'adopcion':
-            return 'Adopción';
+            return 'Adoptar';
         case 'busqueda':
             return 'Perdido';
         case 'gato':

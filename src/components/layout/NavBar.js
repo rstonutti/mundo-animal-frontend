@@ -28,10 +28,10 @@ export const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-auto bd-highlight">
                         <li className="nav-item">
-                            <Link className="nav-link mx-3" to="/adopciones">Adopción</Link>
+                            <Link className="nav-link mx-3" to="/adopciones">Adopciones</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link mx-3" to="/busquedas">Buscados</Link>
+                            <Link className="nav-link mx-3" to="/busquedas">Perdidos</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link mx-3 disabled" to="/#">Contacto</Link>
@@ -44,9 +44,9 @@ export const NavBar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/" onClick={handleLogout}>Cerrar Sesión</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/auth/registro">Registrarse</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
