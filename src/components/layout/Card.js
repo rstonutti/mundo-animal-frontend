@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'cloudinary-react';
+import {Image, Transformation} from 'cloudinary-react';
 import { Link } from 'react-router-dom';
 
 import './layout.scss'
@@ -34,11 +34,14 @@ export const Card = ({ tipo, mascota: { nombre, especie, personalidad }, imagen,
             <div key={uid} className="col-sm-2">
                 <div className="card mt-4 w-100 h-100">
                     <Image
-                        cloudName={nombre}
+                        cloudName='dawjd5cx8'
                         publicId={imagen}
-                        width="100%"
-                        height="100%"
-                    />
+
+
+                    >
+                        
+                        <Transformation height="500" width="500" aspectRatio="1.5" crop="fill" />
+                    </Image>
                     <div className="card-body py-2">
                         <div className="card-grid">
                             <span className="card-title"><b>{nombre}</b></span>

@@ -39,7 +39,7 @@ export const NavBar = () => {
                     </ul>
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-auto bd-highlight">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/auth/login">Iniciar Sesión</Link>
+                            <Link className="nav-link" to="/auth/login">{state.nombre}</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/" onClick={handleLogout}>Cerrar Sesión</Link>
